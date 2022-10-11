@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Settings"
+        android:icon="@android:drawable/ic_menu_preferences"
+        app:showAsAction="always"
+        android:id="@+id/MenuSettings"></item>
+    <item android:title="Shares"
+        android:id="@+id/MenuShares"></item>
+    <item android:title="Search"
+        android:id="@+id/MenuSearch"></item>
+
+    <item android:title="Contract"
+        android:id="@+id/MenuContract">
+
+        <menu>
+            <item android:title="Email"
+                android:id="@+id/MenuEmail"></item>
+            <item android:title="Phone"
+                android:id="@+id/MenuPhone"></item>
+        </menu>
+
+    </item>
+
+    <item android:title="Exit"
+        android:id="@+id/MenuExit"></item>
+
+</menu>
