@@ -14,15 +14,19 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.shopapp.R;
 import com.example.shopapp.adapter.HomeSliderAdapter;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
 
 public class HomeFragment extends Fragment {
-
+    private ImageSlider imageSlider;
     View view;
     ViewPager viewPager;
     LinearLayout sliderDotspanel;
@@ -36,57 +40,14 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_home, container,false);
-
-        timer = new Timer();
-        viewPager = view.findViewById(R.id.viewPager);
-
-        sliderDotspanel = view.findViewById(R.id.SliderDots);
-
-        HomeSliderAdapter viewPagerAdapter = new HomeSliderAdapter(getContext(), images);
-
-        viewPager.setAdapter(viewPagerAdapter);
-
-        dotscount = viewPagerAdapter.getCount();
-        dots = new ImageView[dotscount];
-
-        for (int i = 0; i < dotscount; i++) {
-
-            dots[i] = new ImageView(getContext());
-            dots[i].setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.non_active_dot));
-
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-
-            params.setMargins(8, 0, 8, 0);
-
-            sliderDotspanel.addView(dots[i], params);
-
-        }
-
-        dots[0].setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.active_dot));
-
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-
-                for (int i = 0; i < dotscount; i++) {
-                    dots[i].setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.non_active_dot));
-                }
-
-                dots[position].setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.active_dot));
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-        scheduleSlider();
+        imageSlider = view.findViewById(R.id.imgSlider);
+        ArrayList<SlideModel> slideModels = new ArrayList<>();
+        slideModels.add(new SlideModel("https://bizweb.dktcdn.net/100/376/467/themes/790294/assets/slider_1.jpg?1638519508746", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://bizweb.dktcdn.net/100/376/467/themes/790294/assets/slider_3.jpg?1638519508746", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://bizweb.dktcdn.net/100/376/467/themes/790294/assets/slider_2.jpg?1638519508746", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://aodabong.net/wp-content/uploads/2022/08/bo%CC%81ng-gia%CC%80y-99k.jpeg", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://aodabong.net/wp-content/uploads/2022/08/c91b2f25bbc1739f2ad01.jpeg", ScaleTypes.FIT));
+        imageSlider.setImageList(slideModels,ScaleTypes.FIT);
         return  view;
     }
     public void scheduleSlider() {
@@ -112,4 +73,5 @@ public class HomeFragment extends Fragment {
             }
         }, 1000, 4000);
     }
+
 }

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    >
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_margin="10dp"
+            android:src="@drawable/dao"
+            android:id="@+id/userProfileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline8" />
+        <TextView
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Quang Đạo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/orderLine5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderContainer" />
+
+    <LinearLayout
+        android:id="@+id/orderContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="10dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_orders_icon" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="9"
+            android:text="My Order"
+             />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_arrow_forward"
+            app:tint="@color/black" />
+    </LinearLayout>
+    <View
+        android:id="@+id/orderLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderContainer" />
+
+    <LinearLayout
+        android:id="@+id/orderContainer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="10dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_delivery_address" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="9"
+            android:text="Delivery Address"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_arrow_forward"
+            app:tint="@color/black" />
+    </LinearLayout>
+    <View
+        android:id="@+id/orderLine1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderContainer" />
+    <LinearLayout
+        android:id="@+id/orderContainer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="10dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_settings_24" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="9"
+            android:text="Account Settings"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_arrow_forward"
+            app:tint="@color/black" />
+    </LinearLayout>
+    <View
+        android:id="@+id/orderLine2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderContainer" />
+    <LinearLayout
+        android:id="@+id/orderContainer3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="10dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_help_icon" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="9"
+            android:text="Help"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_arrow_forward"
+            app:tint="@color/black" />
+    </LinearLayout>
+    <View
+        android:id="@+id/orderLine3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderContainer" />
+    <LinearLayout
+        android:id="@+id/orderContainer4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="10dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_about_icon" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="9"
+            android:text="About"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_arrow_forward"
+            app:tint="@color/black" />
+    </LinearLayout>
+    <View
+        android:id="@+id/orderLine4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderContainer" />
+
+</LinearLayout>

@@ -6,6 +6,11 @@
     <string name="app_account">Account</string>
     <string name="app_profile">My Profile</string>
     <string name="app_password">Change Password</string>
+    <string name="shop">Shop</string>
+    <string name="explore">Explore</string>
+    <string name="cart">Cart</string>
+    <string name="favorite">Favorite</string>
+    <string name="account">Account</string>
 
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
