@@ -13,41 +13,43 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.shopapp.R;
 import com.example.shopapp.model.DanhMuc;
+import com.example.shopapp.model.SanPham;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class ListDanhMucAdapter extends RecyclerView.Adapter<ListDanhMucAdapter.ListViewHolder> {
+public class ListSP extends RecyclerView.Adapter<ListSP.ListViewHolder> {
     Context context;
-    private List<DanhMuc> danhMucList;
+    private List<SanPham> sanPhams;
 
-    public ListDanhMucAdapter(Context context, List<DanhMuc> danhMucList) {
+    public ListSP(Context context, List<SanPham> sanPhams) {
         this.context = context;
-        this.danhMucList = danhMucList;
+        this.sanPhams = sanPhams;
     }
 
     @NonNull
     @Override
     public ListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout_danhmuc,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout_sanpham,parent,false);
         return new ListViewHolder(view);
 
     }
 
     @Override
     public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
-        DanhMuc danhMuc = danhMucList.get(position);
-        if (danhMuc==null){
+       SanPham sanPham = sanPhams.get(position);
+        if (sanPham==null){
             return;
         }
-        Picasso.get().load(danhMuc.getAnh()).into(holder.productImage);
-        holder.productName_TextView.setText(danhMuc.getName());
+        Picasso.get().load(sanPham.getAnh()).into(holder.productImage);
+        holder.productName_TextView.setText(sanPham.getName());
+        holder.Price.setText(sanPham.getGia());
     }
 
     @Override
     public int getItemCount() {
-        if(danhMucList!=null){
-            return danhMucList.size();
+        if(sanPhams!=null){
+            return sanPhams.size();
         }
         return 0;
     }
@@ -55,12 +57,13 @@ public class ListDanhMucAdapter extends RecyclerView.Adapter<ListDanhMucAdapter.
     public class ListViewHolder extends RecyclerView.ViewHolder{
         LinearLayout layout;
         ImageView productImage;
-        TextView productName_TextView;
+        TextView productName_TextView,Price;
 
         public ListViewHolder(@NonNull View itemView) {
             super(itemView);
             productImage = itemView.findViewById(R.id.productImage);
             productName_TextView = itemView.findViewById(R.id.productName_TextView);
+            Price = itemView.findViewById(R.id.Price);
             layout = itemView.findViewById(R.id.layout);
 
         }

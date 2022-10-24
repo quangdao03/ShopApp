@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.denzcoskun.imageslider.ImageSlider;
@@ -19,8 +21,13 @@ import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.shopapp.R;
 import com.example.shopapp.adapter.HomeSliderAdapter;
+import com.example.shopapp.adapter.ListDanhMucAdapter;
+import com.example.shopapp.adapter.ListSP;
+import com.example.shopapp.model.DanhMuc;
+import com.example.shopapp.model.SanPham;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -35,6 +42,13 @@ public class HomeFragment extends Fragment {
     private int dotscount;
     private ImageView[] dots;
     private Integer[] images = {R.drawable.slider1, R.drawable.slider2, R.drawable.slider3, R.drawable.slider4, R.drawable.slider5};
+    RecyclerView rcyDanhMuc;
+    ListDanhMucAdapter listDanhMucAdapter;
+    List<DanhMuc> danhMucList = new ArrayList<>();
+
+    RecyclerView rcySp;
+    ListSP sp;
+    List<SanPham> sanPhamList = new ArrayList<>();
 
     @Nullable
     @Override
@@ -48,6 +62,9 @@ public class HomeFragment extends Fragment {
         slideModels.add(new SlideModel("https://aodabong.net/wp-content/uploads/2022/08/bo%CC%81ng-gia%CC%80y-99k.jpeg", ScaleTypes.FIT));
         slideModels.add(new SlideModel("https://aodabong.net/wp-content/uploads/2022/08/c91b2f25bbc1739f2ad01.jpeg", ScaleTypes.FIT));
         imageSlider.setImageList(slideModels,ScaleTypes.FIT);
+        mapping();
+        Danhmuc();
+        SP();
         return  view;
     }
     public void scheduleSlider() {
@@ -74,4 +91,44 @@ public class HomeFragment extends Fragment {
         }, 1000, 4000);
     }
 
+
+
+    public void Danhmuc(){
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager( getActivity(), RecyclerView.HORIZONTAL, false);
+        rcyDanhMuc.setLayoutManager (linearLayoutManager);
+        rcyDanhMuc.setHasFixedSize(true);
+
+        listDanhMucAdapter = new ListDanhMucAdapter(getActivity(),danhMucList);
+        rcyDanhMuc.setAdapter(listDanhMucAdapter);
+
+        danhMucList.add(new DanhMuc(R.drawable.dress,"Dress"));
+        danhMucList.add(new DanhMuc(R.drawable.shirt,"Shirt"));
+        danhMucList.add(new DanhMuc(R.drawable.pants,"Pants"));
+        danhMucList.add(new DanhMuc(R.drawable.dm1,"Tshirt"));
+        danhMucList.add(new DanhMuc(R.drawable.dress,"Dress"));
+        danhMucList.add(new DanhMuc(R.drawable.shirt,"Shirt"));
+
+
+    }
+    public void SP(){
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager( getActivity(), RecyclerView.HORIZONTAL, false);
+        rcySp.setLayoutManager (linearLayoutManager);
+        rcySp.setHasFixedSize(true);
+
+        sp = new ListSP(getActivity(),sanPhamList);
+        rcySp.setAdapter(sp);
+
+        sanPhamList.add(new SanPham(R.drawable.product_0,"Long Sleeve","420.000 đ"));
+        sanPhamList.add(new SanPham(R.drawable.product_0,"Long Sleeve","420.000 đ"));
+        sanPhamList.add(new SanPham(R.drawable.product_0,"Long Sleeve","420.000 đ"));
+        sanPhamList.add(new SanPham(R.drawable.product_0,"Long Sleeve","420.000 đ"));
+        sanPhamList.add(new SanPham(R.drawable.product_0,"Long Sleeve","420.000 đ"));
+
+
+    }
+
+    public void mapping(){
+        rcyDanhMuc = view.findViewById(R.id.rcyDanhMuc);
+        rcySp = view.findViewById(R.id.rcySp);
+    }
 }

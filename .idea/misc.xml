@@ -3,24 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/drawable-v24/ic_baseline_arrow_forward.xml" value="0.176" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/drawable-v24/ic_baseline_search_24.xml" value="0.176" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/drawable-v24/ic_baseline_settings_24.xml" value="0.176" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/drawable-v24/ic_delivery_address.xml" value="0.176" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/drawable-v24/ic_orders_icon.xml" value="0.176" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/drawable-v24/ic_shop.xml" value="0.242" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/drawable-v24/search_edittext_shape.xml" value="0.176" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/layout/activity_menu1.xml" value="0.25" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/layout/fragment_account.xml" value="0.25" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/layout/fragment_favorite.xml" value="0.25" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/layout/fragment_history.xml" value="0.25" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/layout/item_home_slider.xml" value="0.25" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/layout/item_layout_danhmuc.xml" value="0.25" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/layout/layout_header_nav.xml" value="0.25" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/layout/splash_layout.xml" value="0.2359375" />
-        <entry key="..\:/UTT năm 4/ShopApp/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.25" />
+        <entry key="..\:/ShopApp/app/src/main/res/drawable-v24/custom_input.xml" value="0.145" />
+        <entry key="..\:/ShopApp/app/src/main/res/drawable-v24/custom_input1.xml" value="0.145" />
+        <entry key="..\:/ShopApp/app/src/main/res/drawable-v24/ic_baseline_search_24.xml" value="0.145" />
+        <entry key="..\:/ShopApp/app/src/main/res/drawable-v24/ic_heart.xml" value="0.145" />
+        <entry key="..\:/ShopApp/app/src/main/res/drawable-v24/ic_shirt.xml" value="0.145" />
+        <entry key="..\:/ShopApp/app/src/main/res/layout/activity_main.xml" value="0.34479166666666666" />
+        <entry key="..\:/ShopApp/app/src/main/res/layout/fragment_account.xml" value="0.34479166666666666" />
+        <entry key="..\:/ShopApp/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/ShopApp/app/src/main/res/layout/item_layout_danhmuc.xml" value="0.33" />
+        <entry key="..\:/ShopApp/app/src/main/res/layout/item_layout_sanpham.xml" value="0.75" />
         <entry key="..\:/Users/MSI/AndroidStudioProjects/ShopApp2/app/src/main/res/drawable/active_dot.xml" value="0.2785" />
         <entry key="..\:/Users/MSI/AndroidStudioProjects/ShopApp2/app/src/main/res/drawable/ic_favorite.xml" value="0.2075" />
         <entry key="..\:/Users/MSI/AndroidStudioProjects/ShopApp2/app/src/main/res/drawable/non_active_dot.xml" value="0.2785" />
