@@ -54,7 +54,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/userName_TextView"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/textView4"
-                    android:src="@drawable/dao" />
+                    android:src="@drawable/dao112" />
             </LinearLayout>
             <View
                 android:layout_marginTop="2dp"

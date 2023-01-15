@@ -127,35 +127,6 @@ public class MainActivity extends AppCompatActivity  {
         getMenuInflater().inflate(R.menu.menu_demo, menu);
         return super.onCreateOptionsMenu(menu);
     }
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        switch (item.getItemId()){
-            case R.id.MenuSettings:
-                Toast.makeText(MainActivity.this, "Settings", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.MenuContract:
-                Toast.makeText(MainActivity.this, "Contract", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.MenuEmail:
-                Toast.makeText(MainActivity.this, "Email", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.MenuExit:
-                Toast.makeText(MainActivity.this, "Exit", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.MenuPhone:
-                Toast.makeText(MainActivity.this, "Phone", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.MenuSearch:
-                Toast.makeText(MainActivity.this, "Search", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.MenuShares:
-                Toast.makeText(MainActivity.this, "Shares", Toast.LENGTH_SHORT).show();
-                break;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
 
     @Override

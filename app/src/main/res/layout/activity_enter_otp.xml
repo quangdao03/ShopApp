@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnterOTP"
+    android:orientation="vertical">
+
+    <in.aabhasjindal.otptextview.OtpTextView
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:id="@+id/otp_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:height="40dp"
+        app:width="40dp"
+        app:bar_enabled="true"
+        app:bar_height="2dp"
+        app:length="6"
+        app:otp="1234"
+        app:otp_text_size="24dp"/>
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/cickhome"
+        android:text="Next Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
