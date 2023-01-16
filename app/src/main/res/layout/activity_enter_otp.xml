@@ -18,12 +18,19 @@
         app:bar_enabled="true"
         app:bar_height="2dp"
         app:length="6"
-        app:otp="1234"
         app:otp_text_size="24dp"/>
     <Button
         android:layout_gravity="center"
         android:id="@+id/cickhome"
         android:text="Next Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/sendOTP"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="I didn't receive otp code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

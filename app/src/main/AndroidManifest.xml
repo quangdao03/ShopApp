@@ -31,7 +31,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".AuthPhone"
+            android:name=".EnterOTP"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -41,7 +41,7 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".EnterOTP"
+            android:name=".AuthPhone"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

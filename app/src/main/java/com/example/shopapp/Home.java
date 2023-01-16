@@ -14,6 +14,11 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         number1 = findViewById(R.id.number1);
+        getdata();
+    }
 
+    private void getdata(){
+        String strPhoneNumber = getIntent().getStringExtra("phone_number");
+        number1.setText(strPhoneNumber);
     }
 }

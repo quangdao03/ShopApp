@@ -5,6 +5,7 @@ import static android.service.controls.ControlsProviderService.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,7 +30,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import java.util.concurrent.TimeUnit;
 
 public class AuthPhone extends AppCompatActivity {
-    EditText editText;
+    EditText etText;
     Button click;
 
     private FirebaseAuth mAuth;
@@ -36,14 +38,16 @@ public class AuthPhone extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_auth_phone);
-        editText.findViewById(R.id.etText);
-        click.findViewById(R.id.click);
+        FirebaseApp.initializeApp(AuthPhone.this);
         mAuth = FirebaseAuth.getInstance();
+        setContentView(R.layout.activity_auth_phone);
+        etText = findViewById(R.id.etText);
+        click = findViewById(R.id.click);
+
         click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String strPhone = editText.getText().toString();
+                String strPhone = etText.getText().toString();
                 onCLickVeryPhone(strPhone);
             }
         });
@@ -52,7 +56,7 @@ public class AuthPhone extends AppCompatActivity {
     private void onCLickVeryPhone(String strPhone) {
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
-                        .setPhoneNumber(strPhone)       // Phone number to verify
+                        .setPhoneNumber("+84"+strPhone)       // Phone number to verify
                         .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
                         .setActivity(this)                 // Activity (for callback binding)
                         .setCallbacks(new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
